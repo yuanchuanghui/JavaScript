@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,38 @@
     <title>Document</title>
     <script>
         //1.数字0代表八进制（0-7），0x代表16进制（0-9，a-f）
-        var num1=010
-        console.log(num1);//输出8
-        var num2=012;
-        console.log(num2);//输出10
+        var num1 = 010
+        console.log(num1); //输出8
+        var num2 = 012;
+        console.log(num2); //输出10
         //2.数字的最大值
         console.log(Number.MAX_VALUE);
         //3.数字的最小值
         console.log(Number.MIN_VALUE);
         //4.无穷大
-        console.log(Number.MAX_VALUE*2);//已经是最大值了，*2肯定是无穷大啦
+        console.log(Number.MAX_VALUE * 2); //已经是最大值了，*2肯定是无穷大啦
         //5.无穷小
-        console.log(-Number.MAX_VALUE*2);//前面加个负号代表无穷小
+        console.log(-Number.MAX_VALUE * 2); //前面加个负号代表无穷小
         //6.理解非数字NaN
-        console.log('即兴小索奇'-100);//NaN代表非数字（Not a number）
-        console.log(66+'你好');//66你好
-        console.log('你好'+66);//你好66
-//输出结果如下
-// NaN.html:13行 10
-// NaN.html:15行 1.7976931348623157e+308
-// NaN.html:17行 5e-324
-// NaN.html:19行 Infinity
-// NaN.html:21行 -Infinity
-// NaN.html:23行 NaN
-// NaN.html:24行 66你好
-// NaN.html:25行 你好66
+        console.log('即兴小索奇' - 100); //NaN代表非数字（Not a number）
+        console.log(66 + '你好'); //66你好
+        console.log('你好' + 66); //你好66
+        //输出结果如下
+        // 13行 10
+        // 15行 1.7976931348623157e+308
+        // 17行 5e-324
+        // 19行 Infinity
+        // 21行 -Infinity
+        // 23行 NaN
+        // 24行 66你好
+        // 25行 你好66
         //拓展 isNaN()用来判断非数字，如果是数字返回false，不是返回true
-        console.log(isNaN(666));//返回false
-       
+        console.log(isNaN(666)); //返回false
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
