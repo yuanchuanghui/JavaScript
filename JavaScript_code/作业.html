@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function pn() {
+        //     if (pn % pn == 1 && pn % 1 == pn) {
+        //         return pn;
+        //         alert(pn);
+        //     } else {
+
+        //         alert(pn + 1);
+        //     }
+        // };
+        function test(n) {
+            // 判断一个数是否能被自身小的正整数(除开1和自身)整除.如果能整除则不是质数,否则反之.
+            for (var k = 2; k < n; k++) {
+                if (n % k === 0) {
+                    return false;
+                }
+            }
+            return true;
+
+        }
+        console.log(test(prompt()));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
