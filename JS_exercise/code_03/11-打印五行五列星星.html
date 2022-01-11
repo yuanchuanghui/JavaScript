@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 打印五行五列星星
+        //外层循环是行数
+        //内层循环是列数，外层执行一次，内层执行一轮
+        var str = '';
+        for (var i = 1; i <= 5; i++) { // 外层循环负责打印五行
+            for (var j = 1; j <= 5; j++) { // 里层循环负责一行打印五个星星
+                str = str + '★';
+            }
+            // 如果一行打印完毕5个星星就要另起一行 加 \n（换行符号）
+            str = str + '\n';
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
