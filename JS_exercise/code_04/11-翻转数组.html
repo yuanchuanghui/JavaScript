@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 将数组 ['red', 'green', 'blue', 'grey', 'purple'] 的内容反过来存放
+        // 1、声明一个新数组 newArr
+        // 2、把旧数组索引号第4个取过来（arr.length - 1)，给新数组索引号第0个元素 (newArr.length)
+        // 3、我们采取 递减的方式  i--
+        var arr = ['red', 'green', 'blue', 'grey', 'purple', '索奇']; //长度一定不要写死，否则你添加减少元素就很麻烦啦
+        var newArr = [];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            newArr[newArr.length] = arr[i] //i等于'索奇'对应下标0，依次类推，直到i等于red对应下标5（这是把内容反过来放置的）
+        }
+        console.log(newArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
