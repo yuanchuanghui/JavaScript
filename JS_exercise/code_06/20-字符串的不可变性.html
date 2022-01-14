@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 字符串的不可变性  字符串所有的方法都不会改变字符串本身(字符串是不可变的)，操作完成返回一个新的字符串
+		//指的是里面的值不可变，虽然看上去可以改变内容，但其实是地址变了，内存中开辟了一个新的内存空间
+        var str = 'andy';
+        console.log(str);
+        str = 'red';
+        console.log(str);
+        // 因为我们字符串的不可变所以不要大量的拼接字符串 因为每次都需要开辟新空间，所以浪费内存空间
+        var str = '';
+        for (var i = 1; i <= 100000; i++) {//尝试把拼接数值变大，浏览器会变很慢
+            str += i;
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

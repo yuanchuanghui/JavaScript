@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+		// 五个简单类型又叫做基本数据类型或者值类型(放在栈里面)，复杂类型又叫做引用类型(放在堆里面)
+		// 值类型:在存储时变量中存储的是值本身，因此又叫做值类型
+		// string，number，boolean,undefined,null
+		// 引用类型:复杂数据类型，在存储时变量中存储的仅仅是地址(引用)，因此又叫做引用数据类型
+		//通过new关键字创建的对象(系统对象，自定义对象)如Object，Array,Date等
+		// 栈(操作系统)：由操作系统自动分配释放存放函数的参数值、局部变量的值等。
+		// 堆(操作系统）:存储复杂类型(对象)，一般由程序员分配释放，若程序员不释放，由垃圾回收机制回收。
+
+
+        // 简单数据类型 null  返回的是一个空的对象  object 
+		// 这其实是当时设计时候的一个缺陷，但是已经规模使用，就没有更改，记住返回空的对象即可
+        var timer = null;
+        console.log(typeof timer);
+        // 如果有个变量我们以后打算存储为对象，暂时没想好放啥， 这个时候就给 null 
+        // 1. 简单数据类型 是存放在栈里面 里面直接开辟一个空间存放的是值
+        // 2. 复杂数据类型 首先在栈里面存放地址 十六进制表示(系统分配)  然后这个地址指向堆里面的数据
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

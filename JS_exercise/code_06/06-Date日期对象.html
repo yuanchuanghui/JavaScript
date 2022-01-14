@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // Date() 日期对象  是一个构造函数 必须使用new 来调用创建我们的日期对象
+        var arr = new Array(); // 创建一个数组对象
+        var obj = new Object(); // 创建了一个对象实例
+        // 1. 使用Date  如果没有参数 返回当前系统的当前时间
+        var date = new Date();
+        console.log(date);
+        // 2. 参数常用的写法  数字型  2022, 1, 11  或者是 字符串型 '2022-1-11 8:8:8'
+        var date1 = new Date(2022, 1, 11);
+        console.log(date1); // 返回的是 2月 不是 1月 这样写月份默认是+1的
+        var date2 = new Date('2022-1-11 8:8:8');
+        console.log(date2);//返回1月
+
+          /* 复习：利用 new Object 创建对象
+          var obj = new Object(); // 创建了一个空的对象
+        obj.uname = '张三疯';
+        obj.age = 18;
+        obj.sex = '男';
+        obj.sayHi = function() {
+                console.log('hi~');
+
+            }
+            // (1) 我们是利用 等号 = 赋值的方法 添加对象的属性和方法
+            // (2) 每个属性和方法之间用 分号结束
+        console.log(obj.uname);
+        console.log(obj['sex']);
+        obj.sayHi(); */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
