@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>烟花绽放效果</title>
+	<style>
+		*{margin:0;padding: 0;}
+		html{height: 100%;}
+		body{height: 100%;background: #000;overflow: hidden;}
+		.box{width: 5px;height: 30px;border-radius: 50%;background: red;position: absolute;}
+		.yanhua{width: 8px;height: 8px;border-radius: 100%;background: rgb(253, 253, 253);position: absolute;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		document.addEventListener('click',function(e){
+			//获取鼠标点击的位置
+			var e = e || window.event;
+			var x = e.clientX;
+			var y = e.clientY;
+			var h = document.body.clientHeight;
+			//创建一个div  
+			var oDiv = document.createElement("div"); 
+			//属性设置
+			oDiv.className = 'box';
+			oDiv.style.left = x + 'px';
+			oDiv.style.top = h + 'px';
+			oDiv.style.background = color1();
+			 //将元素添加到body  
+			 document.body.appendChild(oDiv);  
+			 //将div移动到点击位置
+		var time = 	setInterval(function(){
+				oDiv.style.top = oDiv.offsetTop - 10  + 'px';
+				if(oDiv.offsetTop <= y){
+					clearInterval(time);
+					oDiv.style.top = y + 'px';
+					document.body.removeChild(oDiv);  
+					//炸开的烟花
+					yanhua(x,y,h);
+				}
+
+			},1000/60);
+		})
+			//小烟花函数
+			function yanhua(x,y,h){
+				var ind = Math.round( Math.random()*50)+10;
+				var fires = [];
+				for(var i = 0 ; i < ind; i++){
+					fires[i] = document.createElement("div"); 
+					fires[i].className = 'yanhua';
+					fires[i].style.left = x + 'px';
+					fires[i].style.top = y + 'px';
+					fires[i].style.background = color1();
+					fires[i].weizhiX = Math.round( Math.random()*20 - 10);
+					fires[i].weizhiY = Math.round( Math.random()*20 - 10);
+					document.body.appendChild(fires[i]);
+				}	
+				//炸开
+				setInterval(function(){
+					for(var j = 0;j<ind;j++){
+						fires[j].style.left = fires[j].offsetLeft + fires[j].weizhiX + 'px';
+						fires[j].style.top = fires[j].offsetTop + fires[j].weizhiY + 'px';
+
+						fires[j].weizhiY +=0.5;
+						if(fires[j].offsetTop > h || fires[j].offsetLeft < 0 || fires[j].offsetLeft > document.body.clientWidth){
+							
+							document.body.removeChild(fires[j]); 
+							// clearInterval(timet);
+						}
+					}
+					},1000/60);  
+				
+			}
+			
+			//随机颜色
+			function color1(){
+				var r = Math.round( Math.random()*255);
+				var g = Math.round( Math.random()*255);
+				var b = Math.round( Math.random()*255);
+				return 'rgb('+ r +','+ g +','+ b +')';
+			}
+			function color2(){
+				return '#' + (~~(Math.random()*(1<<24))).toString(16);
+			}
+		
+	</script>
+</body>
+</html>
